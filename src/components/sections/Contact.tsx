@@ -15,57 +15,6 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        {/* Contact Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {/* Address */}
-          <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700 hover:border-slate-600 transition-all">
-            <div className="text-blue-400 mb-4">
-              <MapPin className="w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-4">Our Office</h3>
-            <p className="text-slate-400">
-              123 Cyber Security Lane<br />
-              San Francisco, CA 94107<br />
-              United States
-            </p>
-          </div>
-
-          {/* Phone */}
-          <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700 hover:border-slate-600 transition-all">
-            <div className="text-blue-400 mb-4">
-              <Phone className="w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-4">Phone</h3>
-            <p className="text-slate-400">
-              +1 (555) 123-4567<br />
-              Mon - Fri, 9am - 5pm PST
-            </p>
-          </div>
-
-          {/* Email */}
-          <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700 hover:border-slate-600 transition-all">
-            <div className="text-blue-400 mb-4">
-              <Mail className="w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-4">Email</h3>
-            <p className="text-slate-400">
-              support@cyberdefense.com<br />
-              sales@cyberdefense.com
-            </p>
-          </div>
-
-          {/* Hours */}
-          <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700 hover:border-slate-600 transition-all">
-            <div className="text-blue-400 mb-4">
-              <Clock className="w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-4">Business Hours</h3>
-            <p className="text-slate-400">
-              Mon - Fri: 9am - 5pm PST<br />
-              Sat - Sun: Closed
-            </p>
-          </div>
-        </div>
 
         {/* Map and Contact Form */}
         <div className="grid md:grid-cols-2 gap-12">

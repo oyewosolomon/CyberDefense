@@ -1,102 +1,58 @@
 import React from 'react';
-import { Shield, CheckCircle } from 'lucide-react';
+import { ShieldCheck, BadgeCheck, HeartPulse, GlobeLock, CreditCard, Server, Award, Shield } from 'lucide-react';
 
-const ComplianceSection = () => {
+const SolutionsSection = () => {
   const certifications = [
-    {
-      name: "ISO 27001",
-      description: "Information Security Management",
-      icon: "/api/placeholder/48/48"
-    },
-    {
-      name: "SOC 2 Type II",
-      description: "Security & Privacy Controls",
-      icon: "/api/placeholder/48/48"
-    },
-    {
-      name: "HIPAA",
-      description: "Healthcare Data Protection",
-      icon: "/api/placeholder/48/48"
-    },
-    {
-      name: "GDPR",
-      description: "EU Data Protection",
-      icon: "/api/placeholder/48/48"
-    }
-  ];
-
-  const standards = [
-    "AES-256 Encryption",
-    "Zero Trust Network",
-    "24/7 SOC Monitoring",
-    "Multi-Factor Authentication",
-    "Regular Penetration Testing",
-    "Automated Threat Detection"
+    { name: "ISO 27001", category: "Information Security", icon: <ShieldCheck size={48} className="text-blue-400" />, year: "2024" },
+    { name: "SOC 2 Type II", category: "Security Controls", icon: <BadgeCheck size={48} className="text-green-400" />, year: "2024" },
+    { name: "HIPAA", category: "Healthcare", icon: <HeartPulse size={48} className="text-red-400" />, year: "2024" },
+    { name: "GDPR", category: "Data Protection", icon: <GlobeLock size={48} className="text-yellow-400" />, year: "2024" },
+    { name: "PCI DSS", category: "Payment Security", icon: <CreditCard size={48} className="text-purple-400" />, year: "2024" },
+    { name: "NIST", category: "Cybersecurity", icon: <Server size={48} className="text-teal-400" />, year: "2024" }
   ];
 
   return (
     <div className="bg-gradient-to-b from-slate-800 to-slate-900 py-24">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Certifications */}
-          <div>
-            <div className="inline-flex items-center px-4 py-2 bg-blue-600/10 rounded-full text-blue-400 mb-6">
-              <Shield size={16} className="mr-2" />
-              <span>Industry-Leading Compliance</span>
-            </div>
-            
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Meeting the Highest Security Standards
-            </h2>
-            
-            <p className="text-slate-400 mb-12">
-              Our platform adheres to international security standards and maintains compliance with major regulatory frameworks.
-            </p>
-
-            <div className="grid grid-cols-2 gap-6">
-              {certifications.map((cert, index) => (
-                <div
-                  key={index}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-slate-600 transition-all"
-                >
-                  <img
-                    src={cert.icon}
-                    alt={cert.name}
-                    className="mb-4"
-                  />
-                  <h3 className="text-white font-semibold mb-2">{cert.name}</h3>
-                  <p className="text-slate-400 text-sm">{cert.description}</p>
-                </div>
-              ))}
-            </div>
+        {/* Header */}
+        <div className="text-center mb-16">
+        <div className="inline-flex items-center px-4 py-2 bg-blue-600/10 rounded-full text-blue-400 mb-6">
+            <Shield size={16} className="mr-2" />
+            <span>Industry Certifications</span>
           </div>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Compliance & Security Certifications
+          </h2>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            Our platform maintains the highest level of security certifications and compliance standards in the industry.
+          </p>
+        </div>
 
-          {/* Right side - Standards */}
-          <div className="bg-slate-800/50 rounded-xl border border-slate-700 p-8">
-            <h3 className="text-2xl font-bold text-white mb-8">
-              Security Standards & Protocols
-            </h3>
-            
-            <div className="space-y-6">
-              {standards.map((standard, index) => (
-                <div
-                  key={index}
-                  className="flex items-center p-4 bg-slate-900/50 rounded-lg hover:bg-slate-900 transition-colors"
-                >
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-4" />
-                  <span className="text-slate-300">{standard}</span>
-                </div>
-              ))}
+        {/* Badges Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+          {certifications.map((cert, index) => (
+            <div
+              key={index}
+              className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-slate-500 transition-all text-center"
+            >
+              <div className="flex justify-center mb-4">{cert.icon}</div>
+              <h3 className="text-white font-semibold mb-2">{cert.name}</h3>
+              <p className="text-slate-400 text-sm mb-2">{cert.category}</p>
+              <p className="text-blue-400 text-sm">Verified {cert.year}</p>
             </div>
+          ))}
+        </div>
 
-            <button className="mt-8 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
-              Download Security Whitepaper
-            </button>
-          </div>
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <button className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all">
+            <Award className="w-5 h-5 mr-2" />
+            Download Security Whitepaper
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default ComplianceSection;
+export default SolutionsSection;

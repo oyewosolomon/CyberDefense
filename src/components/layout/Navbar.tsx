@@ -14,6 +14,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
+            <img src="/favicon.svg" className='h-8 w-8' alt="" />
             <a href="#" className="text-xl font-bold text-white">
               CyberDefense
             </a>

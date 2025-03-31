@@ -45,19 +45,12 @@ export default function Home() {
     <main>
       <Hero/>
       <Features/>
-    <StatsAndCTA/>
-    <SolutionsSection/>
-    <ComplianceSection/>
+      <StatsAndCTA/>
+      {/* <SolutionsSection/> */}
+      <ComplianceSection/>
       <AboutSection/>
       <Partnerships/>
-      {/* <ServicesSection/>
-      <ServicesCategory/> */}
-     
-      {/* <Features/> */}
-      {/* <HowItWorks/>
-      <TrustSafety/>
-      <Partners/>
-      <FAQSection/> */}
+
 
       <PricingSection/>
       <Testimonials/>
