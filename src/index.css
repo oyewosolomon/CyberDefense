@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222 89% 51%;
     --radius: 0.75rem;
+    --font-caladea: 'Caladea', serif;
+    --font-sans: 'ui-sans-serif', system-ui, sans-serif;
   }
 
   .dark {
@@ -46,10 +48,39 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --font-caladea: 'Caladea', serif;
+    --font-sans: 'ui-sans-serif', system-ui, sans-serif;
   }
 
   * {
     @apply border-border;
+  }
+
+  /* Apply Caladea to headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-caladea);
+    @apply font-bold; /* 700 weight */
+    letter-spacing: -0.015em;
+  }
+
+  /* Body text remains sans-serif */
+  body {
+    font-family: var(--font-sans);
+  }
+
+  /* Italic styles */
+  em, i, blockquote {
+    font-family: var(--font-caladea);
+    font-style: italic;
+  }
+
+  /* Utility classes */
+  .font-caladea {
+    font-family: var(--font-caladea);
+  }
+  .font-caladea-italic {
+    font-family: var(--font-caladea);
+    font-style: italic;
   }
   body {
     @apply bg-background text-foreground;
